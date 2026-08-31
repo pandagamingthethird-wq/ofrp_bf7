@@ -158,12 +158,6 @@ TW_FRAMERATE := 60
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
-# Crypto
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_FBE := true
-TW_INCLUDE_FBE_METADATA_DECRYPT := true
-TW_USE_FSCRYPT_POLICY := 2
-
 # USB OTG
 TW_USB_STORAGE := true
 
@@ -176,7 +170,7 @@ TW_NO_FASTBOOT_BOOT := true
 
 # Boot Control for A/B (Fixes TWRP stuck on recovery slot)
 TW_USE_BOOTCTRL := true
-TW_BOOT_CONTROL_VERSION := 1.0
+TW_BOOT_CONTROL_VERSION := 1.2
 
 # Reduce ramdisk size
 TW_EXCLUDE_APEX := true
