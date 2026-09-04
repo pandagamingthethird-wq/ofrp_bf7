@@ -1,31 +1,17 @@
-#
-# Copyright (C) 2025 The Android Open Source Project
-# Copyright (C) 2025 SebaUbuntu's TWRP device tree generator
-#
-# SPDX-License-Identifier: Apache-2.0
-#
 
-# Define hardware platform
-PRODUCT_RELEASE_NAME := BF7
-
-# Device path for OEM device tree
-DEVICE_PATH := device/tecno/$(PRODUCT_RELEASE_NAME)
-
-# Inherit any OrangeFox-specific settings
-$(call inherit-product-if-exists, $(DEVICE_PATH)/fox_$(PRODUCT_RELEASE_NAME).mk)
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/twrp/config/common.mk)
+$(call inherit-product, vendor/pb/config/common.mk)
 
 # Inherit from TECNO-BF7 device
 $(call inherit-product, device/tecno/BF7/device.mk)
 
 PRODUCT_DEVICE := BF7
-PRODUCT_NAME := twrp_BF7
+PRODUCT_NAME := pb_BF7
 PRODUCT_BRAND := TECNO
 PRODUCT_MODEL := TECNO BF7
 PRODUCT_MANUFACTURER := TECNO
