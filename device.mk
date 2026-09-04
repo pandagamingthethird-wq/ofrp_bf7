@@ -28,7 +28,8 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.keymaster_attestation@1.1-service
 
 PRODUCT_PACKAGES += \
-    bootctrl
+    bootctrl \
+    fastbootd
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
